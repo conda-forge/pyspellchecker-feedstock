@@ -5,7 +5,7 @@ Home: https://github.com/barrust/pyspellchecker
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Pure python spell checker based on work by Peter Norvig
 
