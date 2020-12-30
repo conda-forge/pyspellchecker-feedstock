@@ -1,5 +1,5 @@
 {% set name = "pyspellchecker" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 01a71267a2725866487c57b5eb3240eb9a03c0cb5575519089874100008ffc4e
+  sha256: 68af08ae5ffb3ac3d9d01ef421de9310eb3aa68ab7aa5913de846e1f3c0bb76c
 
 build:
   noarch: python
