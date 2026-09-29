@@ -1,19 +1,18 @@
 schema_version: 1
 
 context:
-  name: pyspellchecker
-  version: "0.8.0"
+  version: 0.9.0
 
 package:
-  name: ${{ name|lower }}
+  name: pyspellchecker
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 0c13f129a18fb13dd028d1da9f3197f838cb6ec68b67a89092fe8406b2ec3170
+- url: https://files.pythonhosted.org/packages/source/p/pyspellchecker/pyspellchecker-${{ version }}.tar.gz
+  sha256: eb1a594161c84a4e67df7db1c269a3392a645bd50e4c82e1298892db0cdb0965
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -21,6 +20,8 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
+    - setuptools
+    - wheel
   run:
     - python >=${{ python_min }}
 
