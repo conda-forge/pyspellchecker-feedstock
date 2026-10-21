@@ -21,7 +21,6 @@ requirements:
     - pip
     - python ${{ python_min }}.*
     - setuptools
-    - wheel
   run:
     - python >=${{ python_min }}
 
