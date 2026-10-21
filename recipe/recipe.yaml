@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  version: 0.9.0
+
+package:
+  name: pyspellchecker
+  version: ${{ version }}
+
+source:
+- url: https://files.pythonhosted.org/packages/source/p/pyspellchecker/pyspellchecker-${{ version }}.tar.gz
+  sha256: eb1a594161c84a4e67df7db1c269a3392a645bd50e4c82e1298892db0cdb0965
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - spellchecker
+      pip_check: false
+      python_version:
+        - ${{ python_min }}.*
+        - '*'
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: Pure python spell checker based on work by Peter Norvig
+  homepage: https://github.com/barrust/pyspellchecker
+
+extra:
+  recipe-maintainers:
+    - dschreij
+    - smathot
+    - jsmolic
