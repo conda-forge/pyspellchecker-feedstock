@@ -1,15 +1,15 @@
 schema_version: 1
 
 context:
-  version: 0.9.0
+  version: "0.9.1"
 
 package:
   name: pyspellchecker
   version: ${{ version }}
 
 source:
-- url: https://files.pythonhosted.org/packages/source/p/pyspellchecker/pyspellchecker-${{ version }}.tar.gz
-  sha256: eb1a594161c84a4e67df7db1c269a3392a645bd50e4c82e1298892db0cdb0965
+  - url: https://files.pythonhosted.org/packages/source/p/pyspellchecker/pyspellchecker-${{ version }}.tar.gz
+    sha256: 786c21f082d4059b139bca922cd6db6c85c800374b904b59a8f61d75a0a62d7f
 
 build:
   number: 0
